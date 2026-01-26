@@ -46,12 +46,11 @@ export function DashboardPreview() {
 
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-              Live Market Insights & Analytics
+              Stay Ahead with Live Market Intelligence
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Get access to real-time market data, advanced analytics, and performance tracking 
-            all in one powerful dashboard.
+          Get instant access to real-time crypto data, deep analytics, and portfolio performance—everything you need to trade smarter, faster, and sharper.
           </p>
         </motion.div>
 
@@ -137,12 +136,12 @@ export function DashboardPreview() {
                         <stop offset="95%" stopColor="#10B981" stopOpacity={0}/>
                       </linearGradient>
                     </defs>
-                    <XAxis 
-                      dataKey="time" 
+                    <XAxis
+                      dataKey="time"
                       stroke="#6B7280"
                       style={{ fontSize: '12px' }}
                     />
-                    <YAxis 
+                    <YAxis
                       stroke="#6B7280"
                       style={{ fontSize: '12px' }}
                     />
