@@ -1,4 +1,12 @@
-import { ArrowRight, TrendingUp } from 'lucide-react'
+import {
+  ArrowRight,
+  BarChart2,
+  Lock,
+  Mail,
+  Phone,
+  TrendingUp,
+  User
+} from 'lucide-react'
 import { motion } from 'motion/react'
 import React, { useState } from 'react'
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from 'recharts'
@@ -71,7 +79,7 @@ export function Hero () {
 
             <h1 className='text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight'>
               <span className='bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent'>
-                Master Forex Investing & Maximize Your Returns
+                Master Crypto Investing & Maximize Your Returns
               </span>
               <br />
               <span className='bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 bg-clip-text text-transparent'>
@@ -240,131 +248,151 @@ export function Hero () {
               width={400}
               height={200}
             /> */}
-            {/*
-            <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-8 border border-green-500/30 shadow-2xl">
 
+            <div className='relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl rounded-2xl p-8 border border-green-500/30 shadow-2xl'>
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-4 -right-4 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded-full shadow-lg"
+                className='absolute -top-4 -right-4 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded-full shadow-lg'
               >
-                <div className="text-xs font-semibold text-white">🔥 Limited Offer</div>
+                <div className='text-xs font-semibold text-white'>
+                  🔥 Limited Offer
+                </div>
               </motion.div>
 
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Start Trading Today</h3>
-                <p className="text-sm text-gray-400">Get 3 months premium free - Register now!</p>
+              <div className='mb-6'>
+                <h3 className='text-2xl font-bold text-white mb-2'>
+                  Start Trading Today
+                </h3>
+                <p className='text-sm text-gray-400'>
+                  Get 3 months premium free - Register now!
+                </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
-
+              <form onSubmit={handleSubmit} className='space-y-4'>
                 <div>
-                  <label htmlFor="hero-fullName" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor='hero-fullName'
+                    className='block text-sm font-medium text-gray-300 mb-2'
+                  >
                     Full Name *
                   </label>
-                  <div className="relative">
-                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <div className='relative'>
+                    <User className='absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400' />
                     <input
-                      type="text"
-                      id="hero-fullName"
-                      name="fullName"
+                      type='text'
+                      id='hero-fullName'
+                      name='fullName'
                       value={formData.fullName}
                       onChange={handleChange}
                       required
-                      placeholder="John Doe"
-                      className="w-full bg-black/40 border border-white/10 rounded-lg px-10 py-3 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all"
+                      placeholder='John Doe'
+                      className='w-full bg-black/40 border border-white/10 rounded-lg px-10 py-3 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all'
                     />
                   </div>
                 </div>
 
-
                 <div>
-                  <label htmlFor="hero-email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor='hero-email'
+                    className='block text-sm font-medium text-gray-300 mb-2'
+                  >
                     Email Address *
                   </label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <div className='relative'>
+                    <Mail className='absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400' />
                     <input
-                      type="email"
-                      id="hero-email"
-                      name="email"
+                      type='email'
+                      id='hero-email'
+                      name='email'
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      placeholder="john@example.com"
-                      className="w-full bg-black/40 border border-white/10 rounded-lg px-10 py-3 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                      placeholder='john@example.com'
+                      className='w-full bg-black/40 border border-white/10 rounded-lg px-10 py-3 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all'
                     />
                   </div>
                 </div>
 
-
                 <div>
-                  <label htmlFor="hero-phone" className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone Number <span className="text-gray-500">(Optional)</span>
+                  <label
+                    htmlFor='hero-phone'
+                    className='block text-sm font-medium text-gray-300 mb-2'
+                  >
+                    Phone Number{' '}
+                    <span className='text-gray-500'>(Optional)</span>
                   </label>
-                  <div className="relative">
-                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <div className='relative'>
+                    <Phone className='absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400' />
                     <input
-                      type="tel"
-                      id="hero-phone"
-                      name="phone"
+                      type='tel'
+                      id='hero-phone'
+                      name='phone'
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (555) 000-0000"
-                      className="w-full bg-black/40 border border-white/10 rounded-lg px-10 py-3 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all"
+                      placeholder='+1 (555) 000-0000'
+                      className='w-full bg-black/40 border border-white/10 rounded-lg px-10 py-3 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all'
                     />
                   </div>
                 </div>
 
-
                 <div>
-                  <label htmlFor="hero-experience" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor='hero-experience'
+                    className='block text-sm font-medium text-gray-300 mb-2'
+                  >
                     Trading Experience *
                   </label>
-                  <div className="relative">
-                    <BarChart2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <div className='relative'>
+                    <BarChart2 className='absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400' />
                     <select
-                      id="hero-experience"
-                      name="experience"
+                      id='hero-experience'
+                      name='experience'
                       value={formData.experience}
                       onChange={handleChange}
                       required
-                      className="w-full bg-black/40 border border-white/10 rounded-lg px-10 py-3 text-white text-sm focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all appearance-none cursor-pointer"
+                      className='w-full bg-black/40 border border-white/10 rounded-lg px-10 py-3 text-white text-sm focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all appearance-none cursor-pointer'
                     >
-                      <option value="" disabled>Select your experience</option>
-                      <option value="beginner">Beginner - New to trading</option>
-                      <option value="intermediate">Intermediate - Some experience</option>
-                      <option value="advanced">Advanced - Experienced trader</option>
-                      <option value="professional">Professional - Full-time trader</option>
+                      <option value='' disabled>
+                        Select your experience
+                      </option>
+                      <option value='beginner'>
+                        Beginner - New to trading
+                      </option>
+                      <option value='intermediate'>
+                        Intermediate - Some experience
+                      </option>
+                      <option value='advanced'>
+                        Advanced - Experienced trader
+                      </option>
+                      <option value='professional'>
+                        Professional - Full-time trader
+                      </option>
                     </select>
                   </div>
                 </div>
 
-
                 <button
-                  type="submit"
-                  className="group w-full bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-bold py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-green-500/30 hover:shadow-green-500/50 hover:scale-[1.02]"
+                  type='submit'
+                  className='group w-full bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-bold py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-green-500/30 hover:shadow-green-500/50 hover:scale-[1.02]'
                 >
                   Get Started Free
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
                 </button>
 
-
-                <div className="flex items-center justify-center gap-2 text-xs text-gray-400 pt-2">
-                  <Lock className="w-3 h-3 text-green-400" />
+                <div className='flex items-center justify-center gap-2 text-xs text-gray-400 pt-2'>
+                  <Lock className='w-3 h-3 text-green-400' />
                   <span>Your information is secure & confidential</span>
                 </div>
               </form>
 
-
-              <div className="mt-4 pt-4 border-t border-white/10">
-                <div className="flex items-center justify-between text-xs text-gray-400">
+              <div className='mt-4 pt-4 border-t border-white/10'>
+                <div className='flex items-center justify-between text-xs text-gray-400'>
                   <span>✓ No credit card required</span>
                   <span>✓ 24/7 support</span>
                 </div>
               </div>
             </div>
-*/}
           </motion.div>
         </div>
       </div>

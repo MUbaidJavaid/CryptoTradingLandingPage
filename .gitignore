@@ -1,39 +1,41 @@
-# Node modules
-node_modules/
-
-# Build output
-dist/
-build/
-
-# Vite cache
-.vite/
-
-# Environment variables
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Vite cache
+.vite/
+
+# Environment variables
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Optional cache
+.eslintcache
+
+# TypeScript cache (if added later)
+*.tsbuildinfo
+
+# Coverage
+coverage/
+config.bat
+temp_auto_push.bat
+temp_interactive_push.bat
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Editor folders
-.vscode/
-.idea/
-
-# Optional cache
-.eslintcache
-
-# TypeScript cache (if added later)
-*.tsbuildinfo
-
-# Coverage
-coverage/
